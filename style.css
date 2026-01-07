@@ -330,6 +330,36 @@ body {
         resize: none;
     }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+    .social-links a {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        color: #ff3b3b;
+        text-decoration: none;
+        border: 1px solid rgba(255, 59, 59, 0.4);
+        transition: all 0.3s ease;
+    }
+
+        .social-links a:hover {
+            transform: translateY(-6px) scale(1.05);
+            background: #ff3b3b;
+            color: #000;
+            box-shadow: 0 15px 30px rgba(255, 59, 59, 0.35);
+        }
+
+
 /* ===== FOOTER ===== */
 .footer {
     padding: 1.5rem;
