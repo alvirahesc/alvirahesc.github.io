@@ -142,6 +142,11 @@ body {
     animation: blink 1s infinite;
 }
 
+.typing-placeholder {
+    visibility: hidden;
+    position: absolute;
+}
+
 @keyframes blink {
     0%, 50% {
         opacity: 1;
