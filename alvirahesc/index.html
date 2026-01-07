@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Bee.dev</div>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text animate-fade-in">
+                <h1>Hi, I'm <span>Bee</span></h1>
+                <h2>Programmer & Game Developer</h2>
+                <p>
+                    I build modern applications, games, and clean user experiences.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="hero-image animate-float">
+                <img src="profile.jpg" alt="Profile Picture" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <div class="container animate-slide-up">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I'm a passionate programmer focused on game development and modern web technologies.
+                I enjoy turning ideas into interactive experiences and clean, maintainable code.
+            </p>
+
+            <div class="skills">
+                <span>C#</span>
+                <span>ASP.NET Core</span>
+                <span>Game Development</span>
+                <span>JavaScript</span>
+                <span>HTML & CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title animate-slide-up">Projects</h2>
+
+            <div class="project-grid">
+                <div class="project-card animate-zoom-in">
+                    <h3>Project One</h3>
+                    <p>Short description of your project.</p>
+                </div>
+
+                <div class="project-card animate-zoom-in">
+                    <h3>Project Two</h3>
+                    <p>Short description of your project.</p>
+                </div>
+
+                <div class="project-card animate-zoom-in">
+                    <h3>Project Three</h3>
+                    <p>Short description of your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <div class="container animate-fade-in">
+            <h2 class="section-title">Contact</h2>
+            <p>Want to work together or just say hi?</p>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2026 Bee.dev — All Rights Reserved</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

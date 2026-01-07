@@ -1,0 +1,363 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f1a, #14142b);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ===== UTILITIES ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 26, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #6cf;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        position: relative;
+    }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #6cf;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+    }
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+    .hero-text h1 span {
+        color: #6cf;
+    }
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0.5rem 0 1rem;
+    opacity: 0.85;
+}
+
+.hero-text p {
+    max-width: 500px;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .btn.primary {
+        background: #6cf;
+        color: #000;
+    }
+
+        .btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 204, 255, 0.4);
+        }
+
+    .btn.secondary {
+        border: 2px solid #6cf;
+        color: #6cf;
+        margin-left: 1rem;
+    }
+
+        .btn.secondary:hover {
+            background: #6cf;
+            color: #000;
+        }
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+}
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #6cf;
+        box-shadow: 0 0 40px rgba(102, 204, 255, 0.4);
+    }
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 6rem 0;
+    background: #0c0c18;
+    text-align: center;
+}
+
+    .about p {
+        max-width: 700px;
+        margin: auto;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+    .skills span {
+        padding: 0.5rem 1.2rem;
+        background: rgba(102, 204, 255, 0.1);
+        border: 1px solid #6cf;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+/* ===== PROJECTS ===== */
+.projects {
+    padding: 6rem 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        border-color: #6cf;
+        box-shadow: 0 15px 30px rgba(102, 204, 255, 0.2);
+    }
+
+/* ===== CONTACT ===== */
+.contact {
+    padding: 6rem 0;
+    background: #0c0c18;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .contact-form textarea {
+        min-height: 120px;
+        resize: none;
+    }
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1.2s ease forwards;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #0f0f1a;
+        flex-direction: column;
+        width: 200px;
+        padding: 1.5rem;
+        display: none;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero-content {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .btn.secondary {
+        margin-left: 0;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+}
