@@ -18,11 +18,6 @@ const animatedElements = document.querySelectorAll(
     ".animate-fade-in, .animate-slide-up, .animate-zoom-in"
 );
 
-// Start hidden (prevents flashing on load)
-animatedElements.forEach(el => {
-    el.style.opacity = "0";
-});
-
 const revealOnScroll = () => {
     const triggerBottom = window.innerHeight * 0.85;
 
@@ -30,8 +25,7 @@ const revealOnScroll = () => {
         const elementTop = el.getBoundingClientRect().top;
 
         if (elementTop < triggerBottom) {
-            el.style.opacity = "1";
-            el.style.animationPlayState = "running";
+            el.classList.add("show");
         }
     });
 };
