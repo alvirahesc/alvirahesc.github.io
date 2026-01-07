@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-/* ===== OPTIONAL: SMOOTH SCROLL OFFSET (FIX FIXED NAVBAR) ===== */
+/* ===== SMOOTH SCROLL OFFSET (FIX FIXED NAVBAR) ===== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -68,3 +68,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+/* ===== TYPING EFFECT ===== */
+const roles = [
+    "Game Developer",
+    "Programmer",
+    "Web Developer"
+];
+
+const typingText = document.getElementById("typing-text");
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typingSpeed = 90;
+const deletingSpeed = 60;
+const pauseAfterTyping = 1200;
+const pauseAfterDeleting = 400;
+
+function typeEffect() {
+    const currentRole = roles[roleIndex];
+
+    if (!isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentRole.length) {
+            setTimeout(() => isDeleting = true, pauseAfterTyping);
+        }
+    } else {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(() => { }, pauseAfterDeleting);
+        }
+    }
+
+    setTimeout(
+        typeEffect,
+        isDeleting ? deletingSpeed : typingSpeed
+    );
+}
+
+typeEffect();
