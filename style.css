@@ -132,6 +132,7 @@ body {
 
 .typing-wrapper {
     font-weight: 400;
+    min-width: 200px;
     margin-left: 0.5rem;
     color: #ff3b3b;
 }
@@ -140,11 +141,6 @@ body {
     content: "|";
     margin-left: 3px;
     animation: blink 1s infinite;
-}
-
-.typing-placeholder {
-    visibility: hidden;
-    position: absolute;
 }
 
 @keyframes blink {
